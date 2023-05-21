@@ -1,7 +1,12 @@
+type Author @model {
+  id: ID!,
+  author: String!
+  books: [Books]
+}
+
 type Books @model {
   id: ID!
-  title: String!
-  author: String!
+  title: String! @unique
   cover: String
   year: Int!
   description: String
